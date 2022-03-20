@@ -1,0 +1,5 @@
+br\com\onze09\converterImagensWebP\service\ImageServiceImp.class
+br\com\onze09\converterImagensWebP\resource\ImageResourceImp.class
+br\com\onze09\converterImagensWebP\ConversorWebPApplication.class
+br\com\onze09\converterImagensWebP\service\ImageService.class
+br\com\onze09\converterImagensWebP\resource\ImageResource.class
