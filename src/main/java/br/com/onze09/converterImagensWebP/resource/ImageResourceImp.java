@@ -65,5 +65,19 @@ public class ImageResourceImp implements ImageResource{
         return null;
     }
 
+    @Override
+    public ResponseEntity<Void> rotateAndConvertListImagetoPng(List<MultipartFile> listFile,
+                                                               Integer widht,
+                                                               Integer height,
+                                                               Double resize,
+                                                               String rotate) throws IOException {
+        for(MultipartFile file : listFile) {
+            String name = file.getOriginalFilename();
+            name = name.substring(0, (name.length() - 4));
+            imageService.toPNGConvert(file, name, widht, height, resize, rotate);
+        }
+        return null;
+    }
+
 
 }

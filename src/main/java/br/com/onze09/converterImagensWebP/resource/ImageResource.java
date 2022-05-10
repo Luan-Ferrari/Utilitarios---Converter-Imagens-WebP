@@ -46,4 +46,12 @@ public interface ImageResource {
                                                    @RequestParam(value = "height", defaultValue = "100") Integer height,
                                                    @RequestParam(value = "resize", defaultValue = "0") Double resize
     ) throws IOException;
+
+    @PostMapping("/listaPng/rotate")
+    ResponseEntity<Void> rotateAndConvertListImagetoPng(@RequestParam(name = "listFile") List<MultipartFile> listFile,
+                                                   @RequestParam(value = "widht", defaultValue = "100") Integer widht,
+                                                   @RequestParam(value = "height", defaultValue = "100") Integer height,
+                                                   @RequestParam(value = "resize", defaultValue = "0") Double resize,
+                                                   @RequestParam(value = "rotate", defaultValue = "N") String rotate
+    ) throws IOException;
 }

@@ -13,4 +13,8 @@ public interface ImageService {
     Boolean rotateAndConvertImage(MultipartFile multipartFile, String outputName, Integer width, Integer height,
                                   Double resize)
             throws IOException;
+
+    public Boolean toPNGConvert(MultipartFile multipartFile, String outputName, Integer width, Integer height,
+                                Double resize, String rotate)
+            throws IOException;
 }
